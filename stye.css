@@ -1,0 +1,852 @@
+
+/* modification sur tout le site:*/
+*{
+    scroll-behavior: smooth; /*rendre la descente fluide */
+    cursor: none;/*on  retire le curseur pr en mettre un autre apres */
+    font-family: 'JetBrains Mono', monospace;/*je met la police sur tout le site*/
+    animation: apparitionTexte 1s  ease-in-out;/* faire apparaitre la page apres 2 secondes en ease in out*/
+}
+/*ca apparait en changeant l oppacité de 0 à 1*/
+@keyframes apparitionTexte {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+/* modification de la scroll barre mais elle n est pas disponible sur tout les moteurs de recherche (pas sur firefox)*/
+::-webkit-scrollbar{
+    width:20px ;
+    background-color: rgb(30, 30, 30);
+    border: 5px solid rgb(0, 0, 0);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(43, 43, 43);
+    border-radius: 85%;
+    border: 2px solid rgba(255, 255, 0, 0.351);
+    height: 5px;
+}
+
+/*creer un rond comme curseur qui sera mit a la place du curseur de base (voir curseur.js) que l on a retirer au dessus */
+.curseur-customisation{
+    position: fixed;
+    top: 50%;/* le curseur commence au milieu de la page*/
+    left: 50%;
+    transform:translate(-50%,-50%);
+    height: 30px;/*taille du rond*/
+    width: 30px;
+    border:2px solid #fff;
+    border-radius: 50%;/* 50% pour que le rond soit parfait*/
+    background-color:transparent;
+    z-index: 99999  ;/*le curseur est le plus important , il est au premier plan*/
+    transition: transform 0s, opacity 1;
+    pointer-events: none;
+}
+/* formation du petit point qui suit le gros rond*/
+.curseur-customisation-avant{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    background: rgb(173, 173, 173);/* couleur du rond*/
+    height: 10px;/*taille du rond */
+    width: 10px;
+    border: 0.5px solid white;
+    border-radius: 50%;
+    transition: 0.1s ease-in;
+    opacity: 0.5;
+    z-index: 1.1 ;
+
+}
+/*la span avec la class mot important est mise dans plein d endroit de mon site , les mots importants sont en gras*/
+.mot-important{
+    font-weight: bold;
+}
+
+
+
+/* style du body de index.html*/
+.body_de_premiere_page{
+    margin: 0%;
+    padding: 0%;
+    background-image:url("image.png/fondsite1.png");/* image de fond*/
+    background-size: cover; /*elle couvre tout*/
+    background-position: center;  /*elle est au centre*/
+    background-attachment: fixed;/*elle reste fixe*/
+    color: rgb(177, 177, 177);/*couleur du texte*/
+    font-size: 1em;/*taille du texte*/
+    height: 200vh;
+    width: 65%;
+    /*retire les scrol bar pour cette page:*/
+    overflow: hidden;
+
+
+}
+/*style des boutons de la premiere page*/
+.body_de_premiere_page a{
+    text-decoration: none;/*retire le souligenment par defaut*/
+    color: rgb(144, 144, 144);
+    font-size: 1em;
+}
+/*style des boutons de la premiere page quand on passse dessus*/
+.body_de_premiere_page a:hover{
+    opacity: 0.7;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.liste_liens {
+    list-style: none; /*retire les points au debut des lignes*/
+    margin-top:35%; /*positionne la liste */
+    margin-left: 58%;
+
+
+}
+
+/*style des elements de la liste*/
+.liste_liens li{
+    margin-bottom: 2.5%;/*espace les lignes */
+    box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);/* mettre l ombre sous chaque ligne*/
+}
+/* jusqua ligne 130: positionne chaque ligne par leur indice pour correspondre  a l arriere plan*/
+.liste_liens li :nth-child(1){
+    margin-left: 0%; 
+}
+
+.liste_liens li:nth-child(2) {
+    margin-left: 5%; 
+}
+
+.liste_liens li:nth-child(3) {
+    margin-left: 15%;
+}
+
+.liste_liens li:nth-child(4) {
+    margin-left: 25%;
+}
+.liste_liens li:nth-child(5) {
+    margin-left:35%;
+}
+.liste_liens li:nth-child(6) {
+    margin-left: 45%;
+}
+.liste_liens li:nth-child(7) {
+    margin-left: 51%;
+}
+/* on midifie le style  du mot sommaire*/
+.sommaire{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 41%;
+    right: 49%;
+    text-decoration: underline;/*souligne sommaire*/
+    letter-spacing: 1%; /*separe les lettres*/
+}
+
+
+
+
+/*style du haut de page*/
+.intro_au_site_header{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 10%;
+    left: 50%;
+    text-align: center;
+    position: fixed;
+    font-size: 1em;
+    margin-right: 1.8%;
+}
+.image_tete{
+    width: 28%;
+    height: 70%;
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    left: 5% ;
+    top: -30%;
+    transition: 2s ease-in-out;/*prepare le hover , delai de 2s*/
+    
+}
+/* quand la souris passe sur le logo du site*/
+.image_tete:hover{
+    rotate: 10deg;/* tourne un peu */
+    scale: 0.8;/*  diminue de taille*/
+    opacity: 0.2;/* disparait presque */
+}
+
+
+
+
+/* style du lien vers ma passion*/
+.lien_passion{
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(144, 144, 144);
+    font-size: 1em;
+}
+/*  style de la fleche vers le bas  cette fleche est utilisé plusieurs fois dans le site pour differents utilisations
+(fleche2 fleche 3,4) il y aura aussi exactement la meme dans contenu et cours*/
+.fleche{
+    width: 13.1%;
+    height: 22%;
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    left: 88.5% ;
+    bottom: -5.1%;
+}
+/* style du footer */       
+.a_propos_moi{  
+    position: relative;/*Positionne l'élément de manière relative par rapport à sa position normale dans le flux du document. */
+    top:110vh;/*   CACA JSP PRK MODIF PAS  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    left: 80%;
+    font-size: 1.2em;/*modifie la taille de la police dans le footer*/
+    white-space: pre-line;/*eloigne les lignes*/
+}
+/*la fleche vers le bas va disparaitre avec je JavaScript quand on aura cliquer dessus*/
+#boutonfleche.hidden {
+    display: none;
+}
+.fleche2{
+    /*taille de la fleche vers le haut*/
+    width: 13.1%;   
+    height: 22%;
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    left: 89%;
+    top: 230vh;
+}
+
+
+
+/*on commence la style de la  2eme page */
+
+/*style general de la page sur l emplois du temps*/
+.emploi_temps_body{
+    margin: 0%;
+    padding: 0%;
+    background-image:url("image.png/fondemploitemps.png");/* image de fond*/
+    background-size: cover;  /*elle couvre tout*/
+    background-position: center;/*elle est au centre*/
+    background-attachment: fixed;/*elle reste fixe*/ 
+    color: rgb(177, 177, 177);/*couleur du texte*/
+    font-size: 1em;/*taille de la police*/
+    /*taille de la page*/
+    height: 3000px;
+    width: 65%;
+    text-align: center;
+    /*retire les scrol bar pour cette page:*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+} 
+/*modifie les boutons de la page*/
+.emploi_temps_body a{
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(144, 144, 144);
+    font-size: 1.5em;
+}
+/*modifie les boutons de la page quand on les survole*/
+.emploi_temps_body a:hover{
+    opacity: 0.7;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/*style de l emplois du temps:position,taille,bordure,ombre, police en italic,decoupage,durée de transition*/
+table{
+    position: relative;
+    top: 5.5%;
+    left: 55%;
+    height: 16%;
+    width: 70%;
+    border: 5px solid 0.5 rgb(255, 255, 168);
+    border-radius: 15%;
+    overflow: hidden;
+    transition: 2s;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    font-style: italic ;
+    
+}
+/*quand on passe sur le tableau , il grandit et deviens rectangulaire*/
+table:hover{
+    height: 17%;
+    width: 75%;
+    border-style:double;
+    border: 5px solid 0.7 rgb(255, 255, 169);
+    font-size: 1.25em;
+    border-radius:0%;
+    
+}
+/*style des colonnes et des lignes*/
+th, td {
+    border: 2px solid ;
+    padding: 1%;
+    color: rgb(255, 255, 189);
+    opacity: 0.4;
+  }
+
+/*style du h1"emplois du temps"*/
+.h1_edt{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 15%;
+    left: 45%;
+    color: rgb(177, 177, 177);
+    font-size: 1.4em;
+}
+/*style du logo specifique a la page : l horloge : position,taille,transition,bordure */
+.horloge{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 40%;
+    left: 60%;
+    height:100px ;/*   CACA JSP PRK disparait   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    width: 200px;/*   CACA JSP PRK  disparait !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    transition: 3s;
+    border-radius: 100px 500px 500px 100px;
+    box-shadow: 40px 40px 15px black;/*ombre*/
+}
+/*style du logo specifique a la page : l horloge :quand on passe dessus:taille et opacité */
+.horloge:hover{
+    rotate: 10deg;
+    scale: 0.8;
+    opacity: 0.2;
+}
+
+
+/*je n ai pas trouver de meilleure facon que de mettre des reperes avant les ancres pour que quand la page defile
+l ancre soit au milieu et pas en haut..*/
+#repere1{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 700px;
+    left: 400px;
+}
+#ancre1{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 1000px;
+    left: 400px;
+    color: #929292;
+    font-size: 1.7em;
+}
+
+
+
+#repere2{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 1200px;
+    left: 400px;}
+#ancre2{
+        position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+        top: 1500px;
+        left: 400px;
+        color: #929292;
+        font-size: 1.7em;
+}    
+
+
+
+
+
+#repere3{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 1700px;
+    left: 400px;}
+#ancre3{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 2000px;
+    left: 400px;
+    color: #929292;
+}
+
+
+
+
+
+
+#repere4{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 2200px;
+    left: 400px;}
+
+#ancre4{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 2500px;
+    left: 300px;
+    color: #929292; 
+    
+}
+
+
+
+/*style de la premiere phrase:position,alignement du texte , police en gras et ombre,et taille du texte*/
+#phrase_accroche{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 5%;
+    left: 12%;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    text-shadow:4px 8px 15px black ;
+}
+/*style du header :reglage de la position a fixé pour qu il reste au defilement*/
+.header_edt{
+    position: fixed; 
+    top: 20%;
+    left:15%;
+       
+}
+/*meme modifications que  pour image_tete :*/
+.image_tete2{
+    width: 14%;
+    height: 23%;
+    position: absolute; /*on va modifier la position  de manière absolue par rapport à son conteneur */
+    left: 0% ;
+    top:0%;
+    transition: 2s ease-in-out;
+    
+}
+.image_tete2:hover{
+    rotate: 10deg;
+    scale: 0.8;
+    opacity: 0.2;
+}
+
+
+/*style du bouton aide et du message:opacité,position,bordure , couleur de fond,taille,couleur de l ecriture et taille de l ecriture...*/
+.bouton_aide{
+    opacity: 0.5;
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 37%;
+    left: 18%;
+    color: rgb(220, 216, 216);  
+    font-size: 1.3em;
+    background-color:transparent;
+    border:10px  #616161;
+    border-radius: 15%;             
+
+    transition: 2s;
+ 
+}
+
+.bouton_aide:hover {
+    color: #fff;
+    text-decoration:underline;
+    rotate: 10deg;
+    scale: 0.8;
+    opacity: 0.2;
+}
+     
+
+.message_aide{
+    display:none;
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 45%;
+    left: 18%;
+    text-align: left;
+    
+    
+}
+
+/*style du body de la 3eme page :image de fond,taille de l ecriture, cache la scroll barre,couleur de l ecriture*/
+.cour_contenu{
+    margin: 0%;
+    padding: 0%;
+    background-image:url("image.png/fond_cour.png");
+    background-size: cover; 
+    background-position: center;  
+    background-attachment: fixed;
+    color: rgb(177, 177, 177);
+    font-size: 1em;
+    height:100vh;
+    overflow-x: hidden;
+
+}
+/*style des bouton de cette page et quand on passe dessus :couleur , style:soulignement gras, taille du texte,retire la decoration 
+du lien*/
+.cour_contenu a{
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(144, 144, 144);
+    font-size: 1.5em;
+}
+.cour_contenu a:hover{
+    opacity: 0.7;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/*style du contenu: position, bordure,taille max,,transition,retire la scroll barre horizontale....*/
+.tout_le_contenu{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    left:10%;
+    top: 320%;
+    max-height: 60%; 
+    max-width: 80%;
+    overflow-y: scroll; 
+    border:5px solid #616161;
+    border-radius: 15%;
+    text-align: center;
+    transition: 1s;
+}
+
+
+/*agrandir , mettre de l ombre et la taille du texte quand le curseur passe sur le contenue*/
+.tout_le_contenu:hover{
+    scale: 1.1;
+    box-shadow: 10px 10px 20px white;
+    font-size: 1.1em;
+}
+
+  
+
+
+/*fixer la position du header*/
+.header_cour{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*meme chose que image_tete*/
+.image_tete3{
+    position: absolute; /*on va modifier la position  de manière absolue par rapport à son conteneur */
+    left: 0% ;
+    top:0%;
+    transition: 2s ease-in-out;
+    width: 15%;
+    height: 25%;
+
+    
+}
+.image_tete3:hover{
+    rotate: 10deg;
+    scale: 0.8;
+    opacity: 0.2;
+}
+
+
+/*style de footer*/
+.footer_cours{
+    position: absolute; /*on va modifier la position  de manière absolue par rapport à son conteneur */
+    text-align: center;
+
+}
+
+/*style de la premiere phrase:position,alignement du texte , police en gras et ombre,et taille du texte*/
+.phrase_accroche2{
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 54%;
+    left: 10%;
+    font-size: 2.3em;
+    text-align: center;
+    font-weight: bold;
+    text-shadow:4px 8px 15px black ;
+}
+
+
+
+/*style du bouton et du message cacher*/
+.bouton_aide2{  
+    opacity: 0.5;
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 75%;
+    left: 40%;
+    color: rgb(220, 216, 216);
+    font-size: 1.3em;
+    background-color: transparent;
+    border:10px  #616161;
+    border-radius: 15%;            
+    transition: 2s;
+ 
+}
+
+.bouton_aide2:hover {
+    color: #fff;
+    text-decoration:underline;
+    rotate: 10deg;
+    scale: 0.8;
+    opacity: 0.2;
+}
+     
+
+.message_aide2{
+    display: none;
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 78%;
+    left: 45%;
+    text-align: left;
+    font-size: 1em;
+ }
+
+/*style de la barre de recherche et du bouton recherche*/
+#input_date {
+    text-align: center;
+    color: #929292;
+    font-size: 16px;    
+    border: 5px solid #808080;
+    border-radius: 5px;
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top:75% ;
+    left: 62.5%;
+    background-color: transparent;
+    width: 7%;
+    height:7%;
+
+
+}
+
+#boutonrecherche {
+    font-size: 0.9em; 
+    background-color:transparent;
+    color: #929292;
+    border: solid; 
+    border: 5px solid #808080;
+    border-radius: 5px;
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 75%;
+    left: 71%;
+    height:9%;
+    width: 9%;
+
+
+}
+
+/*meme chose que pour fleche*/
+.fleche3{
+    width: 13.1%;
+    height: 22%;  
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 380%;
+    left:90%;
+}   
+
+
+/*style du debut de la deuxieme methode*/
+.intro_2eme_methode{
+    font-size:1.7em ;
+    text-decoration:underline;
+    position:absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top:117% ;
+    left:36%;
+}
+
+
+
+/*jusqua ligne 690 :c est le style et la position des differents etapes pour trouver le bon mois */
+.question_année{
+    font-size:1.4em ;
+    position:absolute;
+    top:148% ;
+    left:32% ;
+
+}
+.choix_année1{
+    font-size:1.2em ;
+    position:absolute;
+    top:160% ;
+    left:31% ;
+}
+.choix_année2{
+    font-size:1.2em ;   
+    position:absolute;
+    top:165% ;
+    left:30.2% ;
+}
+.année1{
+    font-size:1.2em ;
+    position:absolute;
+    top:188%;
+    left:26% ;
+    text-decoration: underline;
+}    
+
+.question_mois{
+    font-size:1.4em ;   
+    position:absolute;
+    top:191.5% ;
+    left:29%;
+}
+
+.mois1{
+    text-decoration: underline;
+    font-size:1.2em ;
+    position:absolute;
+    top:201%;
+    left:38%;
+}
+.mois2{
+    text-decoration: underline;
+    font-size:1.2em ;
+    position:absolute;
+    top:206% ;
+    left:40% ;
+}
+.mois3{ 
+    text-decoration: underline;
+    font-size:1.2em ;
+    position:absolute;
+    top:211% ;
+    left:42%;
+}
+.mois4{
+    text-decoration: underline;
+    font-size:1.2em ;
+    position:absolute;
+    top:216%;
+    left:44%;
+}
+
+
+/*meme chose que pour fleche ou fleche 2 ou 3*/
+.fleche4{
+    width: 13.1%;
+    height: 22%;     
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top:198% ;
+    left:90%;
+
+}
+/*style du footer*/
+.footer_cours{
+    font-size: 1.5em;
+    position: absolute;/*on va modifier la position  de manière absolue par rapport à son conteneur */
+    top: 390%;
+    left: 8%;
+}
+
+
+/* style de body de la page sur le volleyball*/
+/*le code qui suit n utilise pas d autres propriete que celles utilisée avant */
+.volley_ball{
+    color: white;
+    background-image:url("image.png/fond_volley.png");
+    background-size: cover; 
+    background-position: center;  
+    background-attachment: fixed;
+    color: rgb(177, 177, 177);
+    font-size: 1em;
+    height: 160vh;
+    
+}
+
+
+.haut2page_passion{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    text-align: center;
+    position: fixed;
+}
+
+.image_tete4{
+    width: 30%;
+    height: 120%;
+    position: absolute;
+    right: 150%;
+    top: -40%;
+    transition: 2s ease-in-out;
+    }
+
+.image_tete4:hover{
+    rotate: 10deg;
+    scale: 0.8;
+    opacity: 0.2;   
+}
+.en-tête_1_passion{
+    font-size: 3em;
+    position: relative;
+    top: -25%;  
+    left: -55%;
+}
+.balle{
+    width: 20%;
+    height: 100%;      
+    opacity: 0.7;
+    position: absolute;
+    left: 50%;
+    animation: rotation 3s linear infinite;
+    filter: brightness(0.5);
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } 
+.sommaire2{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    text-decoration: underline;
+    letter-spacing: 1%; 
+}
+
+.joueur{
+    width: 30%;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    position: fixed;
+    opacity: 0.2;
+}
+
+.contenu_volley{
+    position: absolute; 
+    left:5%;
+    top: 90%;
+    max-height: 60%; 
+    max-width: 90%;
+    overflow-y: scroll; 
+    background-color:rgba(173, 173, 173,0.5);
+    border:5px solid rgb(173, 173, 173);
+    border-radius: 15%;
+    text-align: center;
+    transition: 1s;
+    color: #fff;
+    text-align: left;
+    line-height: 2;
+    box-shadow: 10px 10px 20px white;
+    font-size: 1.2em;
+
+  }
+
+.contenu_volley p{
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+.contenu_volley h3{
+    margin-left: 20%;
+    font-size: 1.4em;
+
+}
+
+.liste_lien2 li {
+    margin-bottom: 5%;
+    list-style-type:none;
+  }
+.liste_lien2{    
+    position: absolute;
+    top: 35%;
+    left: 30%;
+
+}
+.lien_du_sommaire{
+    color:rgb(133, 133, 133);
+    font-size: 1.5em;   
+    margin-bottom: 2%;
+    transition: 1s;
+
+}
+.lien_du_sommaire:hover{
+    scale: 1.2;
+    opacity: 0.8;
+    color: white;
+}
+.volleyeur_connu{
+    width: 20%;
+    height: 20%;
+    border: 5px #2f2f2f solid;
+    border-radius: 15%;
+}
+.lien_volley{
+        color: white;
+        text-decoration: underline;
+}

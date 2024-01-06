@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>votre emploie du temps de nsi</title>
+        <link rel="stylesheet" href="stye.css">
+        <script defer src="edt.js"></script>
+        <script defer src="curseur.js"> </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata:wght@200&family=JetBrains+Mono:ital,wght@0,200;1,200&family=Oswald:wght@200;400;500&family=Rubik+Doodle+Shadow&family=Teko:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body class="emploi_temps_body">
+        <!-- on met les curseur modifiés dans une section -->
+        <section>
+            <div class="curseur-customisation"></div>
+            <div class="curseur-customisation-avant"></div>
+        </section>
+        <header class="header_edt">
+            <a href="emploi_temps.html"><img src="image.png/horloge.png" alt="horloge"class="horloge"></a>
+        </header>
+        <p id="phrase_accroche">C'est ici que vous consultez votre emploi du temps spécifique à la NSI.</p>
+        <a href="index.html"><img src="image.png/image tete finale.png" alt="logo du site monstre" title="monstre" class="image_tete2"></a>
+        <h1 class="h1_edt">emploi du temps:</h1>
+        
+        <table>
+            <tr>    
+                <th>Heure</th>
+                <th>Lundi</th>
+                <th>Mardi</th>
+                <th>Mercredi</th>
+                <th>Jeudi</th>
+                <th>Vendredi</th>
+                <th>samedi</th>
+            </tr>
+            <tr>
+                <td>8h00 - 10h00</td>
+                <td></td>
+                <td></td>
+                <td><a href="#repere1" >NSI</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10h00 - 12h00</td>
+                <td></td>
+                <td></td>
+                <td><a href="#repere2">NSI</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12h00 - 14h00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a href="#repere3" >NSI</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14h00 - 18h00</td>
+                <td></td>
+                <td></td>
+                <td><a href="#repere4">atelier</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        
+        </table>
+        <!--section sur l aide de la page-->
+        <section>
+            <button class="bouton_aide" id="bouton_aide">Aide</button>
+            <section class="message_aide" id="message_aide">
+                <p>fonctionnement de la page:<br>
+                <ul>cliquez sur un cour</ul>
+                <ul>lisez la description</ul>
+                <ul>cliquez sur l'horloge</ul>
+                <ul>et voilà! </ul>
+                </p>
+            </section>
+        </section>
+        <section id="les descritptions des cours">
+            <p id="repere1"></p>
+            <h2 id="ancre1">mercredi de 8 à 10: <br>TP informatique en 201 avec demi-groupe 1</h2> 
+            <p id="repere2"></p>
+            <h2 id="ancre2">mercredi de 10 à 12: <br> TP informatique en 201 avec demi-groupe 2</h2>
+            <p id="repere3"></p>
+            <h2 id="ancre3">jeudi de 12 à 14 : <br>cour en salle 217 ,classe entiere </h2>
+            <p id="repere4"></p>
+            <h2 id="ancre4">mercredi apres-midi (tous les premiers du mois):  <br> atelier de découvertes jeux de société avec la classe et facultatif</p>
+        </section>
+
+    </body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>devoir et contenu</title>
+        <link rel="stylesheet" href="stye.css">
+        <script  src="curseur.js"> </script>
+        <script src="cour.js" defer > </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata:wght@200&family=JetBrains+Mono:ital,wght@0,200;1,200&family=Oswald:wght@200;400;500&family=Rubik+Doodle+Shadow&family=Teko:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body class="cour_contenu">
+        <!-- on met les curseur modifiés dans une section -->
+        <section>
+            <div class="curseur-customisation"></div>
+            <div class="curseur-customisation-avant"></div>
+        </section>
+        <header class="header_cour">
+            <a href="index.html"><img src="image.png/image tete finale.png" alt="logo du site monstre" title="monstre" class="image_tete3"></a>
+        </header>
+        <h1 class="phrase_accroche2">Contenu et Cours. Vous trouverez ici le cours que vous avez manqué ou les devoirs à faire...</h1>
+        <!-- le section concerne le bouton d'aide-->
+        <section>
+            <button class="bouton_aide2" id="bouton_aide2">Aide</button>
+            <div class="message_aide2" id="message_aide2">
+                <p>fonctionnement de la page:</p>
+                <ul>
+                    <li>Entrez dans la barre de recherche une date.</li>
+                    <li>Faites en sorte que ce jour existe. </li>
+                    <li>la date sous la forme jj/mm.</li>
+                    <li>Ça ne marche pas? cliquez sur la flèche</li>
+                </ul>
+            </div>
+        </section>
+        <!-- section regroupant la "premiere methode" pour trouver un jour avec la barre de recherche-->
+        <section id="premiere methode">
+            <input type="text" id="input_date" alt="jj/mm" placeholder="jj/mm">
+            <button id="boutonrecherche">rechercher</button>
+        </section>
+        <!-- section regroupant la "deuxieme methode" pour trouver un jour sans la barre de recherche-->
+        <section id="2eme methode">
+            <p class="intro_2eme_methode" id="intro_2eme_methode">Si vous ne trouvez pas le cour essayez cette méthode:</p>
+            <h1 id="question_année"  class="question_année">Dans quelle année se trouve le cour qui vous manque?</h1><!--l'id haut servira quand il faudra remonté à la question de l année si l'utilasteur veut changer --><!--le choix du mois amene a la section de l'année -->
+            <a href="#2023" class="choix_année1">2023</a>
+            <a href="#2024" class="choix_année2">2024</a>
+            <h2 id="2023" class="année1">2023:</h2><!--l'id 2023 servira quand il faudra remonter à la question du mois si l'utilasteur veut changer -->
+            <h3 class="question_mois">Dans quel mois ce trouve le cour qui vous manque?</h3>
+                    <!--le choix du mois amene a la div du mois -->
+            <a href="#septembre" class="mois1">septembre</a>
+            <a href="#octobre" class="mois2">octobre</a>
+            <a href="#novembre" class="mois3">novembre</a>
+            <a href="#decembre" class="mois4">décembre</a>
+        </section>
+        <!--section avecf tout les cours-->
+        <section class="tout_le_contenu">
+            <section id="2023">
+                <div id="septembre">
+                    <p>
+                        septembre: <a href="#06/09">06/09</a>, <a href="#07/09">07/09</a>, <a href="#13/09">13/09</a>, <a href="#14/09">14/09</a>, <a href="#20/09">20/09</a>, <a href="#21/09">21/09</a> ,<a href="#27/09">27/09</a>, <a href="#28/09">28/09</a>,
+                    </p>
+            
+                    <h1 id="06/09">06/09</h1>
+                    <p>
+                        Liste matériel à coller dans le carnet; consignes générales <br>
+                        QCM puis correction : histoire de l’informatique et différents aspects <br>
+                        Cours : structures algorithmiques 1 : variables: def algorithme et def variables<br>
+                        * Exercice 1 et 2 <br>
+                        pour demain : <br>
+                        * Sur le drive dans le dossier chap1 regarder la vidéo S2_02_Python comme machine à calculer.mp4 et répondre aux questions suivantes :<br>
+                        1) Quelle est l’IDE utilisée dans cette vidéo ?<br>
+                        2) Quel résultat s’afficherait en tapant 20/4 ?<br>
+                        3) Quelle est la différence entre int et float ?<br>
+                        * Terminer exo 1 et 2 puis lire poly 2 sur les instructions conditionnelles et compléter l’exemple<br>
+                    </p>
+                    
+                    <h1 id="07/09">07/09</h1>
+                    <p>
+                        Jeudi 7/09: classe<br>
+                        Correction des questions sur la vidéo<br>
+                        chapitre 0 : définitions générales : Définition de « informatique »<br>
+                        Correction des exercices : exemple de tableau d’avancement<br>
+                        Cours : structures algorithmiques 2 : Instructions conditionnelles<br>
+                        Poly exo 2,3 puis 1 et 4<br>
+                        pour mercredi 13/09 :<br>
+                        * Créer un compte sur france-ioi.org faire sur France IOI les exercices du parcours lycée, niveau 1. 1) affichage de textes, suites d’instructions (6 exercices)<br>
+                        * terminer exo 1 et 4<br>
+                        * regarder la vidéo sur le drive sur le module turtle<br>
+                        pour jeudi 14/09 :<br>
+                        * Avoir le matériel nécessaire  <br>
+                        * installer Python/anaconda à domicile (voir poly “logiciels à installer”; l’installateur peut aussi être récupéré sur le drive dans le dossier “les essentiels”)<br>
+                        * Bien lire le polycopié “organisation du classeur” et appliquer aux premières feuilles<br>
+                        * Chercher dans le dictionnaire (on précisera la source) : algorithme, machine, langage, information et en lien, lire l’article http://www.epi.asso.fr/revue/articles/a1204g.htm<br>
+                        
+                    </p>
+                    <h1 id="13/09">13/09</h1>
+                    <p>
+                        * programmer exo 2 sur python tutor et regarder bien ce qui se passe : https://pythontutor.com/python-debugger.html#mode=edit <br>
+                        * Inscription au groupe classe sur france IOI : http://www.france-ioi.org/ <br>
+                        * TP : utilisation de l’éditeur et variable<br>
+                        * Créer dans votre répertoire de travail un dossier \NSI\chap1_structures algorithmiques<br>
+                        * Programmer les exo 1, 3 et 4 (+5 pour les plus rapides)<br>
+                        pour demain : faire sur France IOI les exercices du niveau 1. 4) lecture de l’entrée : exo 1 et 2<br>
+                        
+                        
+                    </p>
+                    <h1 id="14/09">14/09</h1>
+                    <p>
+                        Correction des exercices et définitions générales  <br> 
+                        Cours : 3) boucle POUR; exemple; faire exemple 2<br>
+                        poly exo 6 et 7ab<br>
+                        * poly exo 7 cd et 9<br>
+                        * Sur france ioi : <br>
+                        1-2 : répétition d’instructions : exo 3,5,6,8<br>
+                        1-4 : lecture de l’entrée : exo 3,4,5<br>
+                        1-5 : tests et conditions : exo 5<br>
+                        * Vérifier que le classeur est bien rangé<br>
+                    </p>
+
+                    <h1 id="20/09">20/09</h1>
+                    <p>
+                        Correction des exercices<br>
+                        Prog exo 7, 9, 11, 12<br>
+                        faire exo 8<br>
+                        avec turtle exo 6 + diverses figures<br>
+                        * poly exo 10; petite interro<br>
+                    </p>
+
+
+                    <h1 id="21/09">21/09</h1>
+                    <p>
+                        interro 20min : boucle pour et QCM<br>
+                        Correction des exercices<br>
+                        cours : 4 tant que; exemple<br>
+                        poly exo 16 et 17 (équivalence pour et tant que) et 18<br>
+                        * exo 13 (bien faire le tableau d’avancement) et 19 (tester sur python et faire un tableau d’avancement pour justifier le résultat obtenu )<br>
+                        * Sur france ioi : <br>
+                        1-4 : lecture de l’entrée : exo 7,8<br>
+                        1-8 :répétitions conditionnées : exo 1,2<br>
+                        * Vérifier que le classeur est bien rangé<br>
+                        
+                    </p>
+
+
+                    <h1 id="27/09">27/09</h1>
+                    <p>
+                        Correction des exercices 13 et 19<br>
+                        Prog exo 18 (2 versions)<br>
+                        Exo 20 et 22 : papier PUIS ordi<br>
+                        exo 14 et 15 + avec turtle diverses figures<br>
+                        * poly exo 21 et 24<br>
+                        * pour mercredi 4 : sur france ioi<br>
+                        1-8 :répétitions conditionnées : exo 4 et 5<br>
+                        * Vérifier que le classeur est bien ran<br>
+                        
+                    </p>
+
+
+                    <h1 id="28/09">28/09</h1>
+                    <p>
+                        Correction des exercices<br>
+                        Cours fonctions: définition; intérêt pour la programmation (éviter le copier-coller et donc faciliter la compréhension et la maintenance du code)<br>
+                        Exemple<br>
+                        Poly exo 26, 29 (d’abord réfléchir à des exemples) et 23<br>
+                        * finir exo 23 et venir en classe avec le programme python <br>
+                        * Lire le document “structure d’un programme python” et venir avec des questions<br>
+                        
+                    </p>
+                </div> 
+                <div id="octobre"> 
+                    <p>ocotobre:<a href="#04/10">04/10</a>,<a href="#05/10">05/10</a>,<a href="#11/10">11/10</a>,<a href="#12/10">12/10</a>,<a href="#16/10">16/10</a>,<a href="#18/10">18/10</a>,<a href="#19/10">19/10</a></p>
+
+                    <h1 id="4/10">4/10</h1>
+                    <p>Correction des exercices<br>
+                        modifier le 23 pour en faire une fonction. Ecrire docstring et tests<br>
+                        Exo 28 et 29<br>
+                        Projet 1 : consignes précises et début<br>
+                        pour demain : exo 31 : faire + écrire le code python correspondant<br>
+                        Projet 1 : à rendre par mail avant mardi prochain 19h dernier délai<br>
+                        
+                    </p>
+
+
+                    <h1 id="05/10">05/10</h1>
+                    <p>interro 10 min : écrire une fonction qui calcule la somme des entiers entre a et b inclus<br>
+                        Correction des exercices<br>
+                        Activité : compter en shadok; Q1,2,3 4 a1 et b1 et 5ab<br>
+                        fonctions exo 30 et 32<br>
+                        * fonctions exo 32 et finir activité<br>
+                        * facultatif : 4 vidéos sur les shadoks sont à regarder sur le drive (dossier chap2); d’autres doivent être disponibles gratuitement sur le site de l’INA<br>
+                        * Projet 1 : à rendre par mail avant mardi prochain 19h dernier délai<br>
+                        
+                        Facultatif : Pour revoir les bonnes pratiques de programmation, en chanson: https://www.youtube.com/embed/hgI0p1zf31k?autoplay=1&feature=oembed&wmode=opaque<br>
+                        
+                    </p>
+
+
+                    <h1 id="11/10">11/10</h1>
+                    <p>Correction des exercices<br>
+                        programmer exo 31, 30 (avec docstring et tests!)<br>
+                        Faire exo 33<br>
+                        Facultatif : <br>
+                        On lance une pièce de monnaie jusqu’à obtenir face et on compte le nombre de pile obtenus avant le premier face. <br>
+                        1 Ecrire une fonction qui simule ce jeu et renvoie le nombre de piles obtenus<br>
+                        2 Simuler un grand nombre de fois ce jeu pour obtenir une estimation de la moyenne du nombre de piles obtenus avant le 1er face.<br>
+                        * faire exemple du poly cours “codage des entiers”<br>
+                        * Fonctions exo 34 et 36 sur papier ET sur ordi<br>
+                        Jeudi 12/10 : classe<br>
+                        
+                    </p>
+
+
+
+                    <h1 id="12/10">12/10</h1>
+                    <p>Correction des exercices et de l’activité shadoks<br>
+                        -> cours chap 2 : codage des entiers<br>
+                            definition base b. Passage base b vers base 10 et base 10 vers base b (avec tableau de puissance). Exemple<br>
+                        poly exo 1abc et 4a	(+ poly facultatif)<br>
+                        * poly exo 2, 3 et 4c<br>
+                        * apprendre PAR COEUR les puissances de 2 jusqu’à 2^12=4096<br>
+                        ATTENTION : cours supplémentaire lundi à 9h en salle 102 (salle à confirmer)<br>
+                        
+
+                    <h1 id="16/10">16/10</h1>
+                    <p>Correction des exercices<br>
+                        cours : méthode des divisions successives. Exemple<br>
+                            3 cas des bases 2 et 16. Exemple<br>
+                        exo 1def, 11 (Q1 seulement) et ex 9<br>
+                        
+                    </p>
+
+
+                    <h1 id="18/10">18/10</h1>
+                    <p>Correction des exercices<br>
+                        cours : II] représentation des entiers relatfis<br>
+                        introduction : méthode du bit de signe qui “ne fonctionne pas”. Exemple<br>
+                                3 méthode du complément à 2 Exemple<br>
+                        numération exo 10; relatifs exo 2 Q1ab et Q2ab; numération exo 11Q3 et 13<br>
+                        Numération exo 12 + relatifs exo 2cd<br>
+                        Lire poly/devoir html/css et noter questions que vous auriez<br>
+                    </p>
+
+
+                    <h1 id="19/10">19/10</h1>
+                    <p>Correction des exercices<br>
+                        Présentation du travail pour les vacances : voir plus bas<br>
+                        relatifs exo 4, 5abc, 3 (dépassement de capacité) et 6<br>
+                        numération exo 13 et 15<br>
+                        
+                        
+                    </p>
+                </div> 
+                <div id="novembre">
+                    <p>novembre:<a href="#05/11">05/11</a>, <a href="#08/11">08/11</a>, <a href="#09/11">09/11</a>, <a href="#15/11">15/11</a>, <a href="#16/11">16/11</a>, <a href="#22/11">22/11</a>,</p>
+                    <h1 id="05/11">05/11</h1>
+                    <p>
+                        DS 1H20 : numération et python<br>
+                        Cours sur les tuples; exemples<br>
+                        Exo 2 et 3 (sur papier)<br>
+                        compléter le II] sur les chaînes en faisant les exemples sur l’ordinateur<br>
+                        Voir vidéo sur le drive : S5_05_manipulation de chaines de caractères<br>
+                    </p>
+
+                    <h1 id="08/11">08/11</h1>
+                    <p>
+                        Correction des exercices et cours sur les chaines<br>
+                        prog : exo 6 (préconditions), 8 et 10 (+4)<br>
+                        Les corrigés sont sur le drive en cas de difficulté. Vous devez être capable de refaire ces exercices “facilement”<br>
+                        Exo 1 et 9 + compléter la page 1 du cours sur les tableaux<br>
+                        
+                    </p>
+
+
+
+                    <h1 id="09/11">09/11</h1>
+                    <p> Correction des exercices <br>
+                        cours sur les tableaux : reprise 1 et 2 + 3 (parcours séquentiel). Exemples 1 et 2<br>
+                        Poly exo 7<br>
+                        A faire : d’abord bien relire le cours!!! <br>
+                        Poly exo 15 et 21. Programmer les deux exemples du cours en Python et venir avec les programmes sur soi (clé usb ou autre moyen valide).<br>
+                        vidéo sur drive pour information : manipulation de listes<br>
+                        vidéo à bien regarder pour jeudi : gestion mémoire des séquences<br>
+                        
+                    </p>
+                    <h1 id="15/11">15/11</h1>
+                    <p> Correction des exercices 15 et 21 <br>
+                        Récupérer fichiers sur drive pour faire exo 23, 19 et 20<br>
+                        (Puis exo 30, 22, 28)<br>
+                        vidéo à bien regarder pour jeudi : gestion mémoire des séquences<br>
+                        Poly exo 16 et 25 + compléter poly cours 3)a) seulement APRES avoir regardé la vidéo<br>
+                        
+                    </p>
+
+
+                    <h1 id="16/11">16/11</h1>
+                    <p>Interro 6 min : tuples et chaines<br>
+                        Correction des exercices <br>
+                        cours sur les tableaux : 4) mutabilité et copie : Bien comprendre les schémas avec les flèches! <br>
+                            Exemple du cours : programmer les fonctions  double_element(tab) et double_element_en_place(tab). Comprendre leur différence et leur différence d’utilisation, en particulier sur les tests!<br>
+                        Programmer les exemples du cours et bien les revoir.<br>
+                        Compléter la fin du polycopié de cours (les listes en python) rapidement. <br>
+                        Exercices 24 et 27 (exemples à la main et méthode en français avant de coder…)<br>
+                        
+                        
+                    </p>
+
+                    <h1 id="22/11">22/11</h1>
+                    <p>Correction des exercices<br>
+                        Cours 1.5) listes python. exemples comparés : tableau ou liste<br>
+                        programmation  : Poly exo 29, 31, 33 et 34 (+26; + faire 33 avec des tableaux et pas des listes) <br>
+                        Exo 14 et 32 et finir 33<br>
+                </div>
+                <div id="decembre">
+                    <h3>décembre</h3>
+                    <p>il n'y a pas encore de contenu dans cette periode de l'année </p>
+                    <a href="#2023">changer le mois</a>
+                </div>
+            </section>
+            <section id="2024">      
+                <h3>2024</h3>
+                <p>
+                    il n'y a pas encore de contenu dans cette periode de l'année
+                    <a href="#question_année">changer l'année</a>
+                </p>
+            </section>
+        </section>
+        <!--section des boutons qui facilitent l utilisation de la page-->
+        <section>
+            <a href="#intro_2eme_methode" id="boutonfleche"><img src="image.png/fleche vers le bas.png" alt="Scroll down" class="fleche"></a>
+            <a href="cour.html"><img src="image.png/fleche2_vershaut.png" class="fleche3"></a>
+            <a href="cour.html"><img src="image.png/fleche2_vershaut.png" class="fleche4"></a>
+        </section>
+        <footer class="footer_cours">
+            Si le cours cherché n'est pas sur ma page: allez le chercher dans "drive du professeur" .
+        </footer>
+    </body>
+   
+</html>
